@@ -1,33 +1,89 @@
-ComfortDelGro (C52.SI) – Equity Valuation Model
-This repository contains a 5-year integrated 3-statement financial model and Discounted Cash Flow (DCF) valuation for ComfortDelGro, a global mobility and transport operator headquartered in Singapore.
+# ComfortDelGro Equity Valuation
 
-The primary objective of this model is to determine the intrinsic value of ComfortDelGro's equity based on fundamental cash flow generation, scrubbed of historical accounting noise, and to analyze the premium assigned by the current market.
+This project is a self-built equity valuation model for **ComfortDelGro Corporation Limited**, developed to strengthen my financial modelling, valuation, and investment analysis skills.
 
-Key Technical Methodologies
-Fully Integrated 3-Statement Architecture: Features dynamically balancing income statements, balance sheets, and cash flow statements projected out to 2030, supported by dedicated Fixed Asset, Retained Earnings, and Debt schedules.
+I built the model independently after learning financial modelling through self-study and online resources. At the start of the project, I had limited Excel modelling experience, so a significant part of the work involved learning how to structure and link a complete valuation model from the ground up.
 
-Bottom-Up Relevered Beta: Bypasses basic historical single-stock regression. The Cost of Capital (WACC: 4.23%) is derived by unlevering the betas of global transit peers (Mobico, FirstGroup, Kelsian) to isolate industry asset risk (0.40), and relevering it using ComfortDelGro’s target capital structure.
+## Model Overview
 
-Accounting Normalization: Historical operating cash flows are scrubbed by normalizing Working Capital fluctuations and stabilizing non-PPE Depreciation & Amortization to reveal true underlying cash generation.
+The workbook includes:
 
-The "Fade" Forecast: Near-term projections converge into a steady-state macroeconomic baseline for the terminal years (2028–2030), culminating in a Perpetuity Growth Terminal Value.
+- Historical and forecast **Income Statement**
+- **Balance Sheet** forecasting
+- **Cash Flow Statement**
+- **Fixed Asset Schedule**
+- **Debt Schedule**
+- **Retained Earnings Schedule**
+- **Non-Controlling Interest Schedule**
+- **Beta estimation**
+- **WACC calculation**
+- **Comparable Company Analysis**
+- **Unlevered Free Cash Flow DCF**
+- **Perpetuity Growth Terminal Value**
+- **Exit Multiple cross-check**
+- **WACC / Terminal Growth sensitivity analysis**
+- Base, best-case, and worst-case operating assumptions
 
-Valuation Summary & Investment Thesis
-Implied Base Case Share Price: SGD 0.96 (Perpetuity Growth Method)
+## Valuation Approach
 
-Current Market Price: ~SGD 1.48
+The primary valuation method used is a **Discounted Cash Flow valuation based on Unlevered Free Cash Flow**.
 
-The Thesis: The DCF calculates a strict intrinsic value of SGD 0.96, driven by the reality of a highly capital-intensive business model where fleet electrification and maintenance CapEx severely suppresses residual Unlevered Free Cash Flow.
+The model forecasts operating performance from historical financial data and estimates enterprise value using:
 
-The Market Gap: The current market price of SGD 1.48 represents a ~50% premium over these fundamental cash flows. This gap indicates the market is completely decoupling CDG from its global peers (which trade at a depressed 2.85x EV/EBITDA median due to labor and fare risks). Instead, investors are valuing ComfortDelGro at a ~6.0x multiple, paying a steep premium for the sovereign-backed stability of Singapore's bus contracting framework and its reliable dividend yield, treating it as a safe-haven utility rather than a standard growth equity.
+1. Present value of forecast free cash flows
+2. Terminal value using the Gordon Growth Method
+3. Enterprise-to-equity value bridge
+4. Diluted shares outstanding to derive implied value per share
 
-Model Structure
-Assumptions & Drivers: Normalized historical inputs and growth drivers.
+The exit multiple method is retained as a secondary valuation cross-check.
 
-Financial Statements: Historical and projected P&L, Balance Sheet, and Cash Flow Statement (2024–2030).
+## Beta and WACC
 
-Supporting Schedules: Granular roll-forwards for PP&E/CapEx, Debt, and Working Capital.
+Rather than relying solely on a third-party reported beta, I constructed a beta estimate using comparable companies.
 
-WACC & Comps: Bottom-up beta derivation, CAPM build-up, and global peer multiples.
+Peer betas were unlevered using their respective capital structures, averaged to estimate industry operating risk, and then relevered using ComfortDelGro's capital structure.
 
-DCF Output: UFCF discounting, Terminal Value calculation, and Enterprise-to-Equity bridge.
+The resulting WACC is approximately **4.2%**, which is used to discount forecast cash flows and terminal value.
+
+## Sensitivity Analysis
+
+Because terminal value represents a significant portion of total enterprise value, the model includes a two-variable sensitivity analysis across:
+
+- **WACC**
+- **Perpetual growth rate**
+
+The base-case assumptions are approximately:
+
+- WACC: **4.2%**
+- Terminal growth: **2.0%**
+
+These assumptions produce an implied equity value of approximately **SGD 1.81 per share**.
+
+## Key Learning Outcomes
+
+This project helped me develop practical experience in:
+
+- Building integrated financial models from raw financial statements
+- Linking the three financial statements
+- Forecasting operating performance
+- Understanding working capital and cash flow drivers
+- Constructing supporting schedules
+- Estimating beta and cost of capital
+- Performing DCF valuation
+- Building sensitivity analysis
+- Auditing financial models for formula and linking errors
+- Distinguishing between model structure, assumptions, and valuation judgment
+
+One of the biggest lessons from the project was that financial modelling is not only about constructing formulas. A significant part of the process involves ensuring that assumptions, financial statements, supporting schedules, and valuation outputs remain internally consistent.
+
+## Project Context
+
+The model was completed independently in approximately one month while balancing university studies and CFA-related study.
+
+Rather than using a pre-built reference model, I adapted financial modelling concepts from educational material to ComfortDelGro's publicly available financial information and developed the forecasting assumptions and valuation structure myself.
+
+## Disclaimer
+
+This model was created for educational and portfolio purposes only.
+
+It does not constitute investment advice, and the assumptions and valuation outputs should not be interpreted as a recommendation to buy or sell ComfortDelGro securities.

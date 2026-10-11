@@ -1,5 +1,5 @@
 ComfortDelGro (C52.SI) – Equity Valuation Model
-This repository contains an institutional-grade, 5-year integrated 3-statement financial model and Discounted Cash Flow (DCF) valuation for ComfortDelGro, a global mobility and transport operator headquartered in Singapore.
+This repository contains a 5-year integrated 3-statement financial model and Discounted Cash Flow (DCF) valuation for ComfortDelGro, a global mobility and transport operator headquartered in Singapore.
 
 The primary objective of this model is to determine the intrinsic value of ComfortDelGro's equity based on fundamental cash flow generation, scrubbed of historical accounting noise, and to analyze the premium assigned by the current market.
 
